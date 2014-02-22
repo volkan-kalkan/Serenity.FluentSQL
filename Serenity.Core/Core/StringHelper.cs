@@ -1,8 +1,5 @@
 using System;
 using System.Collections;
-using System.Text;
-using Serenity.Data;
-using System.Globalization;
 
 namespace Serenity
 {
@@ -14,14 +11,14 @@ namespace Serenity
         ///   <p>Returns true if <see cref="String"/> is <c>null</c> or empty (zero length)</p></summary>
         /// <remarks>
         ///   <p>This function might be useful if an empty string is assumed to be <c>null</c>.</p>
-        ///   <p>This is an extension method, so it can be called directly as <c>str.IsEmptyOrNull()</c>.</p></remarks>
+        ///   <p>This is an extension method, so it can be called directly as <c>str.IsNullOrEmpty()</c>.</p></remarks>
         /// <param name="str">
         ///   String.</param>
         /// <returns>
         ///   If <paramref name="str"/> is <c>null</c> or empty, <c>true</c></returns>
-        public static bool IsEmptyOrNull(this string str)
+        public static bool IsNullOrEmpty(this string str)
         {
-            return str == null || str.Length == 0;
+            return string.IsNullOrEmpty(str);
         }
 
         /// <summary>
@@ -40,16 +37,14 @@ namespace Serenity
         ///   Trimmed string, result is null if empty.</returns>
         public static string TrimToNull(this string str)
         {
-            if (str == null || str.Length == 0)
+            if (str.IsNullOrEmpty())
                 return null;
-            else
-            {
-                str = str.Trim();
-                if (str.Length == 0)
-                    return null;
-                else
-                    return str;
-            }
+            
+            str = str.Trim();
+            
+            if (str.Length == 0)
+                return null;
+            return str;
         }
 
         /// <summary>
@@ -68,13 +63,12 @@ namespace Serenity
         ///   Trimmed string (result won't be null).</returns>
         public static string TrimToEmpty(this string str)
         {
-            if (str == null || str.Length == 0)
+            if (str.IsNullOrEmpty())
                 return String.Empty;
-            else
-                return str.Trim();
+            return str.Trim();
         }
 
-        public static bool IsEmptyOrNull(this ICollection collection)
+        public static bool IsNullOrEmpty(this ICollection collection)
         {
             return collection == null || collection.Count == 0;
         }
