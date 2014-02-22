@@ -1,0 +1,14 @@
+**/bin/Debug/*
+**/bin/Release/*
+obj/
+packages/*/*
+*.bak
+*.orig
+*.pdb
+*.suo
+*.DotSettings*
+*.user
+Thumbs.db
+ErrorLog.db
+StyleCop.Cache
+Documentation/Samples/packages/*/*

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7CCA37B-2CC4-4F86-869A-43413ABC1ABB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Serenity.Core</RootNamespace>
+    <AssemblyName>Serenity.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Helpers\Invariants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\LocalText.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\StringHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\Extensions\FilterableQueryExtensions.cs" />
+    <Compile Include="Data\Extensions\QueryWithParamsExtensions.cs" />
+    <Compile Include="Data\Interface\IFieldWithJoinInfo.cs" />
+    <Compile Include="Data\Interface\IEntityWithJoins.cs" />
+    <Compile Include="Data\Interface\IEntity.cs" />
+    <Compile Include="Data\Interface\IField.cs" />
+    <Compile Include="Data\Sql\Interface\IChainable.cs" />
+    <Compile Include="Data\Sql\Interface\IGetExpressionByName.cs" />
+    <Compile Include="Data\Sql\Join\OuterApply.cs" />
+    <Compile Include="Data\Sql\Join\CrossApply.cs" />
+    <Compile Include="Data\Sql\Join\InnerJoin.cs" />
+    <Compile Include="Data\Sql\Join\RightJoin.cs" />
+    <Compile Include="Data\Sql\Join\Join.cs" />
+    <Compile Include="Data\Sql\Helpers\JoinAliasLocator.cs" />
+    <Compile Include="Data\Sql\Join\LeftJoin.cs" />
+    <Compile Include="Data\Sql\Helpers\T0ReferenceRemover.cs" />
+    <Compile Include="Data\Sql\Interface\IFilterableQuery.cs" />
+    <Compile Include="Data\Sql\Interface\IQueryWithParams.cs" />
+    <Compile Include="Data\Sql\Interface\ISqlQuery.cs" />
+    <Compile Include="Data\Sql\Query\Parameter.cs" />
+    <Compile Include="Data\Sql\Alias\Alias.cs" />
+    <Compile Include="Data\Sql\Criteria\BaseCriteria.cs" />
+    <Compile Include="Data\Sql\Criteria\BinaryCriteria.cs" />
+    <Compile Include="Data\Sql\Criteria\ParamCriteria.cs" />
+    <Compile Include="Data\Sql\Criteria\ValueCriteria.cs" />
+    <Compile Include="Data\Sql\Criteria\UnaryCriteria.cs" />
+    <Compile Include="Data\Sql\Criteria\CriteriaOperator.cs" />
+    <Compile Include="Data\Sql\Criteria\Criteria.cs" />
+    <Compile Include="Data\Sql\Query\SqlConsts.cs" />
+    <Compile Include="Data\Sql\Helpers\SqlConversions.cs" />
+    <Compile Include="Data\Sql\Query\SqlDialect.cs" />
+    <Compile Include="Data\Sql\Query\SqlSettings.cs" />
+    <Compile Include="Extensions\MethodChainingExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Data\Sql\Query\QueryWithParams.cs" />
+    <Compile Include="Data\Sql\Query\Sql.cs" />
+    <Compile Include="Data\Sql\Query\Sql.Keyword.cs" />
+    <Compile Include="Data\Sql\SqlQuery\SqlQuery_Join.cs" />
+    <Compile Include="Data\Sql\SqlQuery\SqlQuery_Entity.cs" />
+    <Compile Include="Data\Sql\SqlQuery\SqlQuery.cs" />
+    <Compile Include="Data\Sql\SqlQuery\SqlQuery_Clone.cs" />
+    <Compile Include="Data\Sql\SqlQuery\SqlQuery_FullTextSearch.cs" />
+    <Compile Include="Data\Sql\SqlQuery\SqlQuery_ToString.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
