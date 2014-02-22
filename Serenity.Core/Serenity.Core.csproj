@@ -33,17 +33,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Helpers\Invariants.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Core\LocalText.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Core\StringHelper.cs">
