@@ -40,7 +40,7 @@ namespace Serenity.Data.Test
             Assert.Equal("'T0.'", T0ReferenceRemover.RemoveT0Aliases("t0.'T0.'"));
             Assert.Equal("Code", T0ReferenceRemover.RemoveT0Aliases("T0.Code"));
             Assert.Equal("(Code)", T0ReferenceRemover.RemoveT0Aliases("(T0.Code)"));
-            Assert.Equal("(Code+' '+Name)", T0ReferenceRemover.RemoveT0Aliases("(T0.Code + ' ' + T0.Name)"));
+            Assert.Equal("(Code + ' ' + Name)", T0ReferenceRemover.RemoveT0Aliases("(T0.Code + ' ' + T0.Name)"));
         }
     }
 }
