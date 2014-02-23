@@ -406,6 +406,24 @@ namespace Serenity.Data
             return criteria;
         }
 
+        /// <summary>
+        /// Must override this or will get operator overload warning.
+        /// </summary>
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        /// <summary>
+        /// Must override this or will get operator overload warning.
+        /// </summary>
+        /// <param name="obj">object</param>
+        /// <returns>True if equals to object</returns>
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
+
         public string ToStringIgnoreParams()
         {
             return ToString(ignoreParams);
