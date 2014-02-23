@@ -371,18 +371,17 @@ namespace Serenity.Data
 
         private static BaseCriteria JoinIf(BaseCriteria criteria1, BaseCriteria criteria2, CriteriaOperator op)
         {
-            if (Object.ReferenceEquals(null, criteria1))
+            if (ReferenceEquals(null, criteria1))
                 throw new ArgumentNullException("criteria1");
 
-            if (Object.ReferenceEquals(null, criteria2))
+            if (ReferenceEquals(null, criteria2))
                 throw new ArgumentNullException("criteria2");
 
             if (criteria1.IsEmpty)
                 return criteria2;
-            else if (criteria2.IsEmpty)
+            if (criteria2.IsEmpty)
                 return criteria1;
-            else
-                return new BinaryCriteria(criteria1, op, criteria2);
+            return new BinaryCriteria(criteria1, op, criteria2);
         }
         
         public static BaseCriteria operator &(BaseCriteria criteria1, BaseCriteria criteria2)
@@ -404,18 +403,7 @@ namespace Serenity.Data
         {
             if (!criteria.IsEmpty)
                 return new UnaryCriteria(CriteriaOperator.Paren, criteria);
-            else
-                return criteria;
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
-
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj);
+            return criteria;
         }
 
         public string ToStringIgnoreParams()
