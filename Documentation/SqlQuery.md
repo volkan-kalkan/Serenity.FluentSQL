@@ -149,7 +149,7 @@ namespace Samples
 
 jQuery yada LINQ kullanıyorsanız bu zincirleme çağırım şekline aşina olmalısınız.
 
-İstersek “query” yerel değişkenininden de kurtulabiliriz:
+İstersek “query” yerel değişkeninden de kurtulabiliriz:
 
 ```csharp
 namespace Samples
