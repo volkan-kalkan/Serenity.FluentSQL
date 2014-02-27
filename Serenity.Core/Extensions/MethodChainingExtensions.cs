@@ -9,6 +9,7 @@ namespace Serenity
         /// <summary>
         /// Allows to reference the call chain object itself without breaking a call chain.
         /// </summary>
+        /// <param name="chain">IChainable object</param>
         /// <param name="action">An action that will be called with the chain object as parameter.</param>
         /// <returns>
         /// The query itself.</returns>
@@ -28,6 +29,7 @@ namespace Serenity
         /// an inline object without breaking a call chain.
         /// </summary>
         /// <param name="action">An action that will be called with the chain object as first parameter.</param>
+        /// <param name="chain">IChainable object</param>
         /// <param name="param1">An object that will be passed to action as second parameter</param>
         /// <returns>
         /// The query itself.</returns>
@@ -47,6 +49,7 @@ namespace Serenity
         /// two inline objects without breaking call chain.
         /// </summary>
         /// <param name="action">An action that will be called with the chain object as first parameter.</param>
+        /// <param name="chain">IChainable object</param>
         /// <param name="param1">An object that will be passed to action as second parameter</param>
         /// <param name="param2">An object that will be passed to action as third parameter</param>
         /// <returns>
@@ -67,6 +70,7 @@ namespace Serenity
         /// three inline objects without breaking call chain.
         /// </summary>
         /// <param name="action">An action that will be called with the chain object as first parameter.</param>
+        /// <param name="chain">IChainable object</param>
         /// <param name="param1">An object that will be passed to action as second parameter</param>
         /// <param name="param2">An object that will be passed to action as third parameter</param>
         /// <param name="param3">An object that will be passed to action as fourth parameter</param>
@@ -89,6 +93,7 @@ namespace Serenity
         /// four inline objects without breaking call chain.
         /// </summary>
         /// <param name="action">An action that will be called with the chain object as first parameter.</param>
+        /// <param name="chain">IChainable object</param>
         /// <param name="param1">An object that will be passed to action as second parameter</param>
         /// <param name="param2">An object that will be passed to action as third parameter</param>
         /// <param name="param3">An object that will be passed to action as fourth parameter</param>
@@ -113,6 +118,7 @@ namespace Serenity
         /// five inline objects without breaking call chain.
         /// </summary>
         /// <param name="action">An action that will be called with the chain object as first parameter.</param>
+        /// <param name="chain">IChainable object</param>
         /// <param name="param1">An object that will be passed to action as second parameter</param>
         /// <param name="param2">An object that will be passed to action as third parameter</param>
         /// <param name="param3">An object that will be passed to action as fourth parameter</param>
@@ -138,6 +144,7 @@ namespace Serenity
         /// six inline objects without breaking call chain.
         /// </summary>
         /// <param name="action">An action that will be called with the chain object as first parameter.</param>
+        /// <param name="chain">IChainable object</param>
         /// <param name="param1">An object that will be passed to action as second parameter</param>
         /// <param name="param2">An object that will be passed to action as third parameter</param>
         /// <param name="param3">An object that will be passed to action as fourth parameter</param>
@@ -164,6 +171,7 @@ namespace Serenity
         /// seven inline objects without breaking call chain.
         /// </summary>
         /// <param name="action">An action that will be called with the chain object as first parameter.</param>
+        /// <param name="chain">IChainable object</param>
         /// <param name="param1">An object that will be passed to action as second parameter</param>
         /// <param name="param2">An object that will be passed to action as third parameter</param>
         /// <param name="param3">An object that will be passed to action as fourth parameter</param>
@@ -191,6 +199,7 @@ namespace Serenity
         /// seven inline objects without breaking call chain.
         /// </summary>
         /// <param name="action">An action that will be called with the chain object as first parameter.</param>
+        /// <param name="chain">IChainable object</param>
         /// <param name="param1">An object that will be passed to action as second parameter</param>
         /// <param name="param2">An object that will be passed to action as third parameter</param>
         /// <param name="param3">An object that will be passed to action as fourth parameter</param>
@@ -219,6 +228,7 @@ namespace Serenity
         /// seven inline objects without breaking call chain.
         /// </summary>
         /// <param name="action">An action that will be called with the chain object as first parameter.</param>
+        /// <param name="chain">IChainable object</param>
         /// <param name="param1">An object that will be passed to action as second parameter</param>
         /// <param name="param2">An object that will be passed to action as third parameter</param>
         /// <param name="param3">An object that will be passed to action as fourth parameter</param>

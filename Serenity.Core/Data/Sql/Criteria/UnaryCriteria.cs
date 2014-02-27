@@ -10,7 +10,7 @@ namespace Serenity.Data
 
         public UnaryCriteria(CriteriaOperator op, BaseCriteria operand)
         {
-            if (Object.ReferenceEquals(operand, null))
+            if (ReferenceEquals(operand, null))
                 throw new ArgumentNullException("operand");
 
             if (op < CriteriaOperator.Paren || op > CriteriaOperator.Exists)
